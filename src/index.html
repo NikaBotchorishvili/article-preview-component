@@ -4,6 +4,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="stylesheet" href="./css/output.css" />
+		<script src="./js/app.js" defer></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -26,7 +27,7 @@
 						Shift the overall look and feel by adding these
 						wonderful touches to furniture in your home
 					</h1>
-					<p class="">
+					<p class="text-grayishBlue font-semibold text-sm">
 						Ever been in a room and felt like something was missing?
 						Perhaps it felt slightly bare and uninviting. I've got
 						some simple tips to help you make any room feel
@@ -49,12 +50,46 @@
 								>
 							</div>
 						</div>
-						<img
-                            id="share-button"
-							class="bg-lightGrayishBlue scale-110 cursor-pointer rounded-full p-2"
-							src="./images/icon-share.svg"
-							alt=""
-						/>
+						<div class="relative">
+							<img
+								id="shareButton"
+								class="bg-lightGrayishBlue scale-110 cursor-pointer rounded-full p-2"
+								src="./images/icon-share.svg"
+								alt=""
+							/>
+							<!-- display: flex is applied from javascript -->
+							<div
+								id="shareBox"
+								class="hidden flex-col items-center absolute -top-[70px] left-1/2 -translate-x-1/2 z-10"
+							>
+								<div
+									class="gap-x-4 bg-veryDarkGrayishBlue px-8 py-4 rounded-lg w-max flex items-center "
+								>
+									<small
+										class="font-extralight tracking-widest text-sm text-white"
+										>SHARE</small
+									>
+
+									<img
+										class="cursor-pointer"
+										src="./images/icon-facebook.svg"
+										alt=""
+									/>
+									<img
+										class="cursor-pointer"
+										src="./images/icon-twitter.svg"
+										alt=""
+									/>
+									<img
+										class="cursor-pointer"
+										src="./images/icon-pinterest.svg"
+										alt=""
+									/>
+								</div>
+                                <div class="arrow-down"></div>
+         
+							</div>
+						</div>
 					</div>
 				</section>
 			</article>
