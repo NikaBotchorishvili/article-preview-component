@@ -14,56 +14,71 @@
 	</head>
 	<body class="font-main bg-lightGrayishBlue">
 		<main class="flex items-center justify-center w-dvw h-dvh">
-			<article class="flex bg-white rounded-l-2xl">
+			<article
+				class="flex md:flex-row flex-col md:w-auto w-[310px] bg-white md:rounded-lt-2xl md:rounded-bl-2xl rounded-b-2xl rounded-t-2xl md:rounded-r-2xl"
+			>
 				<img
-					class="rounded-l-2xl max-w-[270px] max-h-[270px] w-[270px] h-[270px] object-cover object-center"
+					class="md:rounded-lt-2xl md:rounded-bl-2xl md:rounded-tr-none rounded-t-2xl w-full md:max-w-[270px] max-h-[200px] md:max-h-[270px] md:w-[270px] h-[270px] object-cover object-center"
 					src="./images/drawers.jpg"
 					alt=""
 				/>
 				<section
-					class="flex flex-col items-center gap-y-3 max-w-xs md:max-w-md p-5"
+					class="flex flex-col justify-center items-center gap-y-2 max-w-xs md:max-w-md"
 				>
-					<h1 class="text-veryDarkGrayishBlue font-semibold text-xl">
+					<h1
+						class="text-veryDarkGrayishBlue font-semibold text-lg md:text-xl px-5 py-2"
+					>
 						Shift the overall look and feel by adding these
 						wonderful touches to furniture in your home
 					</h1>
-					<p class="text-grayishBlue font-semibold text-sm">
+					<p class="text-grayishBlue font-semibold text-sm px-5 py-1">
 						Ever been in a room and felt like something was missing?
 						Perhaps it felt slightly bare and uninviting. I've got
 						some simple tips to help you make any room feel
 						complete.
 					</p>
 
-					<div class="flex w-full justify-between items-center">
-						<div class="flex items-center gap-x-4">
+					<div
+						id="container"
+						class="flex w-full md:bg-opacity-0 justify-between py-2 rounded-b-2xl md:rounded-b-none md:py-0 px-5 items-center"
+					>
+						<div id="information" class="flex items-center gap-x-4">
 							<img
-								class="size-12 rounded-full"
+								class="size-12 rounded-full block"
 								src="./images/avatar-michelle.jpg"
 								alt=""
 							/>
-							<div>
+							<div class="block">
 								<h3 class="text-veryDarkGrayishBlue font-bold">
 									Michelle Appleton
 								</h3>
 								<small class="text-grayishBlue font-semibold"
-									>28 Jun 2020</small
+									>21 Jan 2024</small
 								>
 							</div>
 						</div>
-						<div class="relative">
+
+						<div class="relative overflow-visble">
 							<img
-								id="shareButton"
-								class="bg-lightGrayishBlue scale-110 cursor-pointer rounded-full p-2"
+								id="shareButtonDesktop"
+								class="bg-lightGrayishBlue scale-110 cursor-pointer rounded-full p-2 shareButton md:flex hidden"
 								src="./images/icon-share.svg"
 								alt=""
 							/>
+							<img
+								id="shareButtonMobileOpen"
+								class="bg-lightGrayishBlue rounded-full shareButton p-2 ounded-full flex md:hidden"
+								src="./images/icon-share.svg"
+								alt="Share"
+							/>
 							<!-- display: flex is applied from javascript -->
+							<!-- This is a desktop version -->
 							<div
 								id="shareBox"
 								class="hidden flex-col items-center absolute -top-[70px] left-1/2 -translate-x-1/2 z-10"
 							>
 								<div
-									class="gap-x-4 bg-veryDarkGrayishBlue px-8 py-4 rounded-lg w-max flex items-center "
+									class="gap-x-4 bg-veryDarkGrayishBlue px-8 py-4 rounded-lg w-max flex items-center"
 								>
 									<small
 										class="font-extralight tracking-widest text-sm text-white"
@@ -86,8 +101,44 @@
 										alt=""
 									/>
 								</div>
-                                <div class="arrow-down"></div>
-         
+								<div class="arrow-down"></div>
+							</div>
+
+							<!-- display: flex is applied from javascript -->
+							<!-- This is a mobile version -->
+							<div
+								id="shareBoxMobile"
+								class="hidden w-[310px] px-5 py-4 rounded-b-2xl bg-veryDarkGrayishBlue flex-row justify-between items-center"
+							>
+								<div
+									class="gap-x-4 rounded-lg w-max flex items-center"
+								>
+									<small
+										class="font-extralight tracking-widest text-sm text-white"
+										>SHARE</small
+									>
+
+									<img
+										class="cursor-pointer"
+										src="./images/icon-facebook.svg"
+										alt=""
+									/>
+									<img
+										class="cursor-pointer"
+										src="./images/icon-twitter.svg"
+										alt=""
+									/>
+									<img
+										class="cursor-pointer"
+										src="./images/icon-pinterest.svg"
+										alt=""
+									/>
+								</div>
+								<img
+									class="bg-lightGrayishBlue cursor-pointer rounded-full shareButton p-2 ounded-full flex md:hidden"
+									src="./images/icon-share.svg"
+									alt="Share"
+								/>
 							</div>
 						</div>
 					</div>
